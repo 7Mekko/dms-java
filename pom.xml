@@ -42,12 +42,6 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
         </dependency>
-        <!-- 数据库连接相关配置 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>    <!-- 企业id需要修改 -->
-            <artifactId>mybatis-spring-boot-starter</artifactId>   <!-- 如果不是spring体系下的内容，请将模块名写在前面 -->
-            <version>1.3.2</version>  <!-- 不是spring体系下的包需要指定版本，因为parent不管其他体系的版本 -->
-        </dependency>
         <!-- 上传组件包 start -->
         <dependency>
             <groupId>commons-fileupload</groupId>
@@ -182,12 +176,19 @@
             <version>3.2.0</version>
         </dependency>
 
+        <!-- slf4j依赖 -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
 
+
+        <!-- SpringData-Jpa依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
         <!-- Mockito -->
         <dependency>
             <groupId>org.mockito</groupId>

@@ -4,21 +4,27 @@ server:
     context-path: /dms
 
 spring:
+  application:
+    name: DeviceManagementSystem
   datasource:
     url: jdbc:mysql://localhost:3306/dms?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
     password: 123
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: MYSQL
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
   redis:
     host: localhost
     port: 6379
-    #timeout: 60s   #数据库连接超时时间
     jedis:
       pool:
         max-active: 500
-        max-idle: 500   #最大空闲连接数
-        min-idle: 50    #最小空闲连接数
-        max-wait: 60s   #最长等待时长
+        max-idle: 500
+        min-idle: 50
+        max-wait: 60s
     database:
       timeout: 60000
   mvc:
